@@ -4,7 +4,7 @@
 
  <div class="py-5 container">
      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-         <a href="register-user.jsp" class="btn btn-outline-danger me-md-2" type="button">Registrarse en Tienda Practicas</a>
+         <a href="register-user.jsp" class="btn btn-outline-danger me-md-2" type="button">Check In</a>
      </div>
  </div>
 
@@ -13,17 +13,17 @@
 
     <main class="form-signin w-100 m-auto ">
         <form>
-            <h2 class="h3 mb-3 fw-normal text-danger">Iniciar Sesion</h2>
+            <h2 class="h3 mb-3 fw-normal text-danger">Log In</h2>
             <div class="form-floating">
-                <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Usuario">
-                <label for="floatingInput">Usuario</label>
+                <input type="text" name="username" class="form-control" id="floatingInput" placeholder="User">
+                <label for="floatingInput">User</label>
             </div>
             <div class="form-floating">
-                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
-                <label for="floatingPassword">Contraseña</label>
+                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="password">
+                <label for="floatingPassword">Password</label>
             </div>
 
-            <button class="btn btn-danger w-100 py-2" type="submit">Iniciar sesion</button>
+            <button class="btn btn-danger w-100 py-2" type="submit">Log In</button>
             <p class="mt-5 mb-3 text-body-secondary">  </p>
         </form>
         <br/>
@@ -32,7 +32,7 @@
 </div>
 <footer class="text-body-secondary py-5">
     <div class="container">
-        <p class="mb-1">&copy; 2024 Practicas</p>
+        <p class="mb-1">&copy; 2024 Vintage Bytes Emporium</p>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

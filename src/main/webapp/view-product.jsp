@@ -40,12 +40,12 @@
                     <img src="../practicas_pictures/<%=products.getImage()%>"  alt="<%= products.getDescription() %>"/>
                     <div class="btn-group">
                         <%if (products.getStock_units() == 0) { %>
-                            <a href="mailto:retrobyte@retrobyte.com" type="button" class="btn btn-sm btn-outline-danger">Consultar Disponibilidad</a>
+                            <a href="mailto:retrobyte@retrobyte.com" type="button" class="btn btn-sm btn-outline-danger">Check availability</a>
                         <%} else {%>
                             <%
                                 if (role.equals("anonymous")) {
                             %>
-                                <a href="login.jsp"  type="button" class="btn btn-sm btn-outline-danger">Inicia sesion para comprar</a>
+                                <a href="login.jsp"  type="button" class="btn btn-sm btn-outline-danger">Log In to Buy</a>
                             <% } else {%>
                                 <%
                                     if (!role.equals("admin")) {
@@ -65,35 +65,35 @@
                 </div>
             </div>
             <div class="col-sm-12  col-md-8 col-lg-8 col-xl-8 py-4 bg-image2">
-                <h3 class="text-danger">Datos del Producto</h3>
+                <h3 class="text-danger">Product Data</h3>
                 <table class="table table-dark table-striped">
                     <tr>
-                        <td class="centrado">Nombre</td>
+                        <td class="centrado">Name</td>
                         <td class="centrado"><%=products.getProduct_name()%></td>
                     </tr>
                     <tr>
-                        <td class="centrado">Descripcion</td>
+                        <td class="centrado">Description</td>
                         <td class="centrado"><%=products.getDescription()%></td>
                     </tr>
 
                     <tr>
-                        <td class="centrado">Fecha de Lanzamiento</td>
+                        <td class="centrado">Release Date</td>
                         <td class="centrado"><%=DateUtils.formatUser(products.getRelease_date())%></td>
                     </tr>
                     <tr>
-                        <th class="centrado">Estado del producto</th>
+                        <th class="centrado">Product Status</th>
                         <td class="centrado"><%=products.getProduct_status()%></td>
                     </tr>
                     <tr>
-                        <td class="centrado">Precio</td>
+                        <td class="centrado">Price</td>
                         <td class="centrado"><%=CurrencyUtils.format(products.getSale_price())%></td>
                     </tr>
                     <tr>
-                        <th class="centrado">Nº Unidades en Stock</th>
+                        <th class="centrado">Stocks Units</th>
                         <%
                             String mensaje_stock_units;
                             if (products.getStock_units() == 0) {
-                                mensaje_stock_units = "Producto temporalmente sin Stock";
+                                mensaje_stock_units = "Out of stock";
                             } else {
                                 mensaje_stock_units = String.valueOf(products.getStock_units());
                             }
@@ -105,7 +105,7 @@
             </div>
         </div>
         <br/>
-        <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver al inicio</a></p>
+        <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to initial menu</a></p>
     </div>
 </main>
 

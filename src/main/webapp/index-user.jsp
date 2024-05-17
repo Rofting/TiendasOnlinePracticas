@@ -15,12 +15,12 @@
 <main>
     <br/>
     <div class="container bg-dark">
-        <h2 class="text-danger">Listado de Usuarios</h2>
+        <h2 class="text-danger">User List</h2>
         <br/>
         <form class="row g-2" id="search-form" method="GET">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Buscar en Usuarios" name="search" id="search-input">
-                <button type="submit" class="btn btn-outline-danger"  id="search-button">Buscar</button>
+                <input type="text" class="form-control" placeholder="Search in Users" name="search" id="search-input">
+                <button type="submit" class="btn btn-outline-danger"  id="search-button">Search</button>
             </div>
         </form>
     </div>
@@ -30,10 +30,10 @@
                 <table class="table table-dark table-striped">
                     <thead>
                     <tr>
-                        <th>Nombre</th>
+                        <th>Name</th>
                         <th>Username</th>
                         <th>Role</th>
-                        <th>Ciudad</th>
+                        <th>City</th>
                         <th></th>
                         <th></th>
                         <th></th>
@@ -71,10 +71,8 @@
                         <td><%=user.getUsername()%></td>
                         <td><%=user.getRole()%></td>
                         <td><%=user.getCity()%></td>
-<%--                        <th><a href="#" type="button" class="btn btn-sm btn-outline-success">Ver Usuario</a></th>--%>
-<%--                        <th> <a href="#" type="button" class="btn btn-sm btn-outline-danger">Eliminar Usuario</a></th>--%>
-                        <th><a href="view-user.jsp?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-success">Ver Usuario</a></th>
-                        <th> <a href="remove-user?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-danger">Eliminar Usuario</a></th>
+                        <th><a href="view-user.jsp?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-success">View User</a></th>
+                        <th> <a href="remove-user?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-danger">Delete User</a></th>
 
                     </tr>
                     <%
@@ -83,7 +81,7 @@
                     </tbody>
                 </table>
         <br/>
-        <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver al Menu Inicial</a></p>
+        <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to initial menu</a></p>
     </div>
 
 </main>

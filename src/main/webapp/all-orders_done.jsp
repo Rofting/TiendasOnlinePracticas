@@ -20,13 +20,13 @@
     <main>
             <br/>
             <div class="container bg-dark">
-                <h2 class="text-danger">Listado de Pedidos Realizados por Usuarios</h2>
+                <h2 class="text-danger">List of Orders Made by Users</h2>
 
                 <br/>
                 <form class="row g-2" id="search-form" method="GET">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Buscar en Pedidos" name="search" id="search-input">
-                        <button type="submit" class="btn btn-outline-danger"  id="search-button">Buscar</button>
+                        <input type="text" class="form-control" placeholder="Search in orders" name="search" id="search-input">
+                        <button type="submit" class="btn btn-outline-danger"  id="search-button">Search</button>
                     </div>
                 </form>
             </div>
@@ -36,13 +36,13 @@
                 <table class="table table-dark table-striped">
                     <thead>
                     <tr>
-                        <th>Id del Pedido</th>
-                        <th>Fecha del Pedido</th>
-                        <th>Nombre del Usuario</th>
-                        <th>Id del Producto</th>
-                        <th>Nombre Producto</th>
-                        <th>Nombre del Proveedor</th>
-                        <th>Precio Total</th>
+                        <th>Order Id</th>
+                        <th>Order date</th>
+                        <th>Username</th>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Suppliers Name</th>
+                        <th>Total Price</th>
 
                     </tr>
                     </thead>
@@ -97,14 +97,14 @@
                         <th></th>
                         <th></th>
                         <th></th>
-                        <th>Total Pedidos:&nbsp<%= CurrencyUtils.format(total_sale) %></th>
+                        <th>Total Orders:&nbsp<%= CurrencyUtils.format(total_sale) %></th>
 
                     </tr>
                     </tbody>
                 </table>
 
                 <br/>
-                <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver al Menu Inicial</a></p>
+                <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to initial menu</a></p>
             </div>
 
         </main>
