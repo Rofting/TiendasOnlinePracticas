@@ -46,20 +46,20 @@
                     <br/>
                         <a href="register-product.jsp" class="btn btn-sm btn-outline-primary" type="button">Alta Producto</a>
                         <a href="index-user.jsp" class="btn btn-sm btn-outline-danger" type="button">Usuarios</a>
-<%--                    <a href="index-suppliers.jsp" class="btn btn-sm btn-outline-primary" type="button">Proveedores</a>--%>
-<%--                    <a href="all-orders_done.jsp" class="btn btn-sm btn-outline-danger" type="button">Pedidos Realizados</a>--%>
+                        <a href="index-suppliers.jsp" class="btn btn-sm btn-outline-primary" type="button">Proveedores</a>
+                        <a href="all-orders_done.jsp" class="btn btn-sm btn-outline-danger" type="button">Pedidos Realizados</a>
                 <%
                 } else {
                 %>
                      <h3 class="text-white">---Productos Estrella---</h3>
                 <br/>
-<%--                <%--%>
-<%--                    if (role.equals("user")){--%>
-<%--                %>--%>
-<%--                    <a href="index-sales.jsp" class="btn btn-sm btn-outline-primary" type="button">Ver mis pedidos</a>--%>
-<%--                <%--%>
-<%--                        }--%>
-<%--                %>--%>
+                <%
+                    if (role.equals("user")){
+                %>
+                    <a href="index-sales.jsp" class="btn btn-sm btn-outline-primary" type="button">Ver mis pedidos</a>
+                <%
+                        }
+                %>
                 <%
                     }
                 %>
