@@ -71,10 +71,10 @@
                         <td><%=user.getUsername()%></td>
                         <td><%=user.getRole()%></td>
                         <td><%=user.getCity()%></td>
-                        <th><a href="#" type="button" class="btn btn-sm btn-outline-success">Ver Usuario</a></th>
-                        <th> <a href="#" type="button" class="btn btn-sm btn-outline-danger">Eliminar Usuario</a></th>
-<%--                        <th><a href="view-user.jsp?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-success">Ver Usuario</a></th>--%>
-<%--                        <th> <a href="remove-user?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-danger">Eliminar Usuario</a></th>--%>
+<%--                        <th><a href="#" type="button" class="btn btn-sm btn-outline-success">Ver Usuario</a></th>--%>
+<%--                        <th> <a href="#" type="button" class="btn btn-sm btn-outline-danger">Eliminar Usuario</a></th>--%>
+                        <th><a href="view-user.jsp?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-success">Ver Usuario</a></th>
+                        <th> <a href="remove-user?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-danger">Eliminar Usuario</a></th>
 
                     </tr>
                     <%

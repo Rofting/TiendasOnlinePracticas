@@ -108,14 +108,14 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="view-product.jsp?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-primary">Ver</a>
-<%--                                        <%--%>
-<%--                                            if (role.equals("admin")){--%>
-<%--                                        %>--%>
-<%--                                        <a href="register-product.jsp?id_product=<%=products.getId_product()%>"  type="button" class="btn btn-sm btn-outline-primary">Editar</a>--%>
-<%--                                        <a href="remove-products?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>--%>
-<%--                                        <%--%>
-<%--                                            }--%>
-<%--                                        %>--%>
+                                        <%
+                                            if (role.equals("admin")){
+                                        %>
+                                        <a href="register-product.jsp?id_product=<%=products.getId_product()%>"  type="button" class="btn btn-sm btn-outline-primary">Editar</a>
+                                        <a href="remove-products?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>
+                                        <%
+                                            }
+                                        %>
                                     </div>
                                     <small class="text-body-secondary">Precio: <%= CurrencyUtils.format(products.getSale_price()) %> </small>
                                 </div>
