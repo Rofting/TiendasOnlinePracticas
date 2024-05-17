@@ -41,7 +41,6 @@
                         <th>Nombre del Usuario</th>
                         <th>Id del Producto</th>
                         <th>Nombre Producto</th>
-                        <th></th>
                         <th>Nombre del Proveedor</th>
                         <th>Precio Total</th>
 
@@ -83,7 +82,6 @@
                         <td><%=orders_done.getUsername()%></td>
                         <td><%=orders_done.getId_product()%></td>
                         <td><%=orders_done.getProduct_name()%></td>
-                        <td><%= orders_done.getId_product()%></td>
                         <td><%=orders_done.getSupplier_name()%></td>
                         <td><%= CurrencyUtils.format(orders_done.getTotal_price()) %></td>
 
