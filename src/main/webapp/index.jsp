@@ -37,26 +37,26 @@
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="text-white"><strong>Practicas</strong></h1>
+                <h1 class="text-white"><strong>Vintage Bytes Emporium</strong></h1>
 
                 <%
                     if (role.equals("admin")){
                 %>
-                    <h3 class="text-white">---Modo Administrador---</h3>
+                    <h3 class="text-white">---Administrator Mode---</h3>
                     <br/>
-                        <a href="register-product.jsp" class="btn btn-sm btn-outline-primary" type="button">Alta Producto</a>
-                        <a href="index-user.jsp" class="btn btn-sm btn-outline-danger" type="button">Usuarios</a>
-                        <a href="index-suppliers.jsp" class="btn btn-sm btn-outline-primary" type="button">Proveedores</a>
-                        <a href="all-orders_done.jsp" class="btn btn-sm btn-outline-danger" type="button">Pedidos Realizados</a>
+                        <a href="register-product.jsp" class="btn btn-sm btn-outline-primary" type="button">New product</a>
+                        <a href="index-user.jsp" class="btn btn-sm btn-outline-danger" type="button">Admin Users</a>
+                        <a href="index-suppliers.jsp" class="btn btn-sm btn-outline-primary" type="button">Admin Suppliers</a>
+                        <a href="all-orders_done.jsp" class="btn btn-sm btn-outline-danger" type="button">Orders Done</a>
                 <%
                 } else {
                 %>
-                     <h3 class="text-white">---Productos Estrella---</h3>
+                     <h3 class="text-white">---Star Products---</h3>
                 <br/>
                 <%
                     if (role.equals("user")){
                 %>
-                    <a href="index-sales.jsp" class="btn btn-sm btn-outline-primary" type="button">Ver mis pedidos</a>
+                    <a href="index-sales.jsp" class="btn btn-sm btn-outline-primary" type="button">See my orders</a>
                 <%
                         }
                 %>
@@ -71,8 +71,8 @@
             <div class="container">
                 <form class="row g-2" id="search-form" method="GET">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Buscar en Productos" name="search" id="search-input">
-                        <button type="submit" class="btn btn-outline-danger"  id="search-button">Buscar</button>
+                        <input type="text" class="form-control" placeholder="Search in products " name="search" id="search-input">
+                        <button type="submit" class="btn btn-outline-danger"  id="search-button">Search</button>
                     </div>
                 </form>
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -107,17 +107,17 @@
 
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="view-product.jsp?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-primary">Ver</a>
+                                        <a href="view-product.jsp?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-primary">View</a>
                                         <%
                                             if (role.equals("admin")){
                                         %>
-                                        <a href="register-product.jsp?id_product=<%=products.getId_product()%>"  type="button" class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="remove-products?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>
+                                        <a href="register-product.jsp?id_product=<%=products.getId_product()%>"  type="button" class="btn btn-sm btn-outline-primary">Edit</a>
+                                        <a href="remove-products?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-danger">Delete</a>
                                         <%
                                             }
                                         %>
                                     </div>
-                                    <small class="text-body-secondary">Precio: <%= CurrencyUtils.format(products.getSale_price()) %> </small>
+                                    <small class="text-body-secondary">Price: <%= CurrencyUtils.format(products.getSale_price()) %> </small>
                                 </div>
                             </div>
                         </div>

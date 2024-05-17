@@ -15,7 +15,7 @@
 <main>
     <br/>
     <div class="container bg-dark">
-        <h2 class="text-danger">Listado de Productos sin stock y Proveedor que lo suministra</h2>
+        <h2 class="text-danger">List of Products out of stock and Suppliers</h2>
 
         <br/>
 
@@ -42,11 +42,11 @@
 
                     </tr>
                     <tr>
-                        <th>Id producto</th>
-                        <th>Nombre Producto</th>
-                        <th>Precio</th>
-                        <th>Nombre Proveedor</th>
-                        <th>Telefono</th>
+                        <th>Product Id</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Supplier Name</th>
+                        <th>Phone</th>
                         <th>Email</th>
                         <th>Website</th>
                         <th> </th>
@@ -85,7 +85,7 @@
                                     <td><%=suppliers.getTel()%></td>
                                     <td><%=suppliers.getEmail()%></td>
                                     <td><%=suppliers.getWebsite()%></td>
-                                    <td><a href="remove-products?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a></td>
+                                    <td><a href="remove-products?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-danger">Delete</a></td>
                                 </tr>
                     <%
                                 }
@@ -95,7 +95,7 @@
                 </table>
 
         <br/>
-        <p><a href="index-suppliers.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver a Proveedores</a></p>
+        <p><a href="index-suppliers.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to Suppliers</a></p>
     </div>
 
 </main>

@@ -22,7 +22,7 @@
             %>
             <br/>
             <div class="container bg-dark">
-                <h2 class="text-danger">Listado de Productos pedidos por <%=username_init%></h2>
+                <h2 class="text-danger">List of Products Ordered By <%=username_init%></h2>
 
                 <br/>
 
@@ -33,12 +33,12 @@
                 <table class="table table-dark table-striped">
                     <thead>
                     <tr>
-                        <th>Id del Pedido</th>
-                        <th>Fecha del Pedido</th>
-                        <th>Id del Producto</th>
-                        <th>Nombre Producto</th>
-                        <th>Nombre del Proveedor</th>
-                        <th>Precio Total</th>
+                        <th>Order Id</th>
+                        <th>Order Date</th>
+                        <th>Product Id</th>
+                        <th>roduct Name</th>
+                        <th>Suppliers Name</th>
+                        <th>Total Price</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -74,7 +74,7 @@
                 </table>
 
                 <br/>
-                <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver al Menu Inicial</a></p>
+                <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to initial menu</a></p>
             </div>
 
         </main>

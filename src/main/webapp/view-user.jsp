@@ -7,7 +7,7 @@
 <main>
     <%
         if (!role.equals("admin")){
-            response.sendRedirect("/retrocomputer");
+            response.sendRedirect("/tiendaonlinepracticas");
         }
         //Si no eres el administrador no puedes entrar a esta pagina
         try {
@@ -28,11 +28,11 @@
             <div class="col-sm-12  col-md-8 col-lg-8 col-xl-8 py-4 bg-dark">
                 <table class="table table-dark table-striped">
                     <tr>
-                        <td class="centrado"><h2 class="text-danger">Ver Usuario</h2></td>
+                        <td class="centrado"><h2 class="text-danger">View User</h2></td>
                         <td class="centrado"></td>
                     </tr>
                     <tr>
-                        <td class="centrado">Nombre</td>
+                        <td class="centrado">Name</td>
                         <td class="centrado"><%=user.getName()%></td>
                     </tr>
                     <tr>
@@ -45,23 +45,23 @@
                         <td class="centrado"><%=user.getRole()%></td>
                     </tr>
                     <tr>
-                        <th class="centrado">Telefono</th>
+                        <th class="centrado">Phone</th>
                         <td class="centrado"><%=user.getTel()%></td>
                     </tr>
                     <tr>
-                        <td class="centrado">Direccion</td>
+                        <td class="centrado">Address</td>
                         <td class="centrado"><%=user.getAddress()%></td>
                     </tr>
                     <tr>
-                        <th class="centrado">Codigo Postal</th>
+                        <th class="centrado">Zip Code</th>
                         <td class="centrado"><%=user.getZip_code()%></td>
                     </tr>
                     <tr>
-                        <th class="centrado">Ciudad</th>
+                        <th class="centrado">City</th>
                         <td class="centrado"><%=user.getCity()%></td>
                     </tr>
                     <tr>
-                        <th class="centrado">Pais</th>
+                        <th class="centrado">Country</th>
                         <td class="centrado"><%=user.getCountry()%></td>
                     </tr>
 
@@ -70,7 +70,7 @@
             </div>
         </div>
         <br/>
-        <p><a href="index-user.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver a Usuarios</a></p>
+        <p><a href="index-user.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to Users</a></p>
     </div>
 
 </main>

@@ -45,48 +45,48 @@
 
     <section class="py-5 container">
         <% if (id==0) {%>
-        <h3 class="text-danger">Registrar Nuevo Proveedor</h3>
+        <h3 class="text-danger">New Supplier</h3>
         <% } else { %>
-        <h3 class="text-danger">Modificar Proveedor</h3>
+        <h3 class="text-danger">Modify Supplier</h3>
         <% } %>
         <br/>
 
         <form class="row g-3 needs-validation bg-dark border-dark" method="post" enctype="multipart/form-data" id="edit-form">
             <div class="col-md-6 text-white bg-dark">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Ejemplo:  Miguel Angel"
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder=".."
                 <% if (id !=0) {%> value="<%=suppliers.getName()%>"<% }%>>
             </div>
             <div class="col-md-6 text-white bg-dark">
-                <label for="tel" class="form-label">Telefono</label>
+                <label for="tel" class="form-label">Phone</label>
                 <input type="text" name="tel" class="form-control" id="tel" placeholder="+34605888888"
                 <% if (id !=0) {%> value="<%=suppliers.getTel()%>"<% }%>>
             </div>
             <div class="mb-3 text-white bg-dark">
-                <label for="address" class="form-label">Direccion</label>
-                <input type="text" name ="address" class="form-control" id="address" placeholder="Ejemplo Calle...."
+                <label for="address" class="form-label">Address</label>
+                <input type="text" name ="address" class="form-control" id="address" placeholder=".."
                 <% if (id !=0) {%> value="<%=suppliers.getAddress()%>"<% }%>>
             </div>
             <div class="col-md-2 text-white bg-dark">
-                <label for="zip_code" class="form-label">Codigo Postal</label>
+                <label for="zip_code" class="form-label">Zip Code</label>
                 <input type="text" name ="zip_code" class="form-control" id="zip_code" placeholder="50500"
                 <% if (id !=0) {%> value="<%=suppliers.getZip_code()%>"<% }%>>
             </div>
             <div class="col-md-2 text-white bg-dark">
-                <label for="city" class="form-label">Ciudad</label>
+                <label for="city" class="form-label">City</label>
                 <input type="text" name="city" class="form-control" id="city" placeholder="Zaragoza"
                 <% if (id !=0) {%> value="<%=suppliers.getCity()%>"<% }%>>
 
             </div>
             <div class="col-md-2 text-white bg-dark">
-                <label for="country" class="form-label">Pais</label>
-                <input type="text" name ="country" class="form-control" id="country" placeholder="España"
+                <label for="country" class="form-label">Country</label>
+                <input type="text" name ="country" class="form-control" id="country" placeholder="Spain"
                 <% if (id !=0) {%> value="<%=suppliers.getCountry()%>"<% }%>>
 
             </div>
             <div class="col-md-2 text-white bg-dark">
                 <label for="website" class="form-label">Website</label>
-                <input type="text" name ="website" class="form-control" id="website" placeholder="www.ejemplo.com"
+                <input type="text" name ="website" class="form-control" id="website" placeholder="www.example.com"
                     <% if (id !=0) {%> value="<%=suppliers.getWebsite()%>"<% }%>>
 
             </div>
@@ -98,14 +98,14 @@
             </div>
 
             <div class="col-12">
-                <button class="btn btn-danger" type="submit">Enviar Proveedor</button>
+                <button class="btn btn-danger" type="submit">Send Supplier</button>
             </div>
             <input type="hidden" name="id_supplier" value="<%=id%>"/>
         </form>
         <br/>
         <div id="result"></div>
         <br/>
-        <p><a href="index-suppliers.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver a Proveedores</a></p>
+        <p><a href="index-suppliers.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to Suppliers</a></p>
     </section>
 </main>
 

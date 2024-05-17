@@ -17,16 +17,16 @@
 <main>
     <br/>
     <div class="container bg-dark">
-        <h2 class="text-danger">Listado de Proveedores</h2>
+        <h2 class="text-danger">Supplier List</h2>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a href="register-suppliers.jsp" type="button" class="btn btn-outline-danger">Alta de Nuevo Proveedor</a>
-            <a href="list-out-stock.jsp" type="button" class="btn btn-outline-danger">Listado de productos sin Stock</a>
+            <a href="register-suppliers.jsp" type="button" class="btn btn-outline-danger">New Supplier</a>
+            <a href="list-out-stock.jsp" type="button" class="btn btn-outline-danger">List of products out of stock</a>
         </div>
         <br/>
         <br/>
         <form class="row g-2" id="search-form" method="GET">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Buscar en Proveedores" name="search" id="search-input">
+                <input type="text" class="form-control" placeholder="Search in Suppliers" name="search" id="search-input">
                 <button type="submit" class="btn btn-outline-danger"  id="search-button">Buscar</button>
             </div>
         </form>
@@ -38,9 +38,9 @@
                 <table class="table table-dark table-striped">
                     <thead>
                     <tr>
-                        <th>Id proveedor</th>
-                        <th>Nombre</th>
-                        <th>Ciudad</th>
+                        <th>Supplier Id</th>
+                        <th>Name</th>
+                        <th>City</th>
                         <th>Email</th>
                         <th></th>
                         <th></th>
@@ -91,7 +91,7 @@
                 </table>
 
         <br/>
-        <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver al Menu Inicial</a></p>
+        <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to initial menu</a></p>
     </div>
 
 </main>

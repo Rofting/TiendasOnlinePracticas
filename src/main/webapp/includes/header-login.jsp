@@ -102,14 +102,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-md-7 py-4">
-                    <h4>Sobre Nosostros</h4>
-                    <p class="text-body-secondary">Somos unos alumnos de 1 de DAM, para conocernos mas contacta con nosotros</p>
+                    <h4>About Us</h4>
+                    <p class="text-body-secondary">We are 1St DAM/DAW students, to know more contact us</p>
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4">
                     <h4>Contacto</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Siguenos en X</a></li>
-                        <li><a href="#" class="text-white">también en Facebook</a></li>
+                        <li><a href="#" class="text-white">Follow us on X</a></li>
+                        <li><a href="#" class="text-white">Also on Facebook</a></li>
                         <li><a href="mailto:practicas@practicas.com" class="text-white">practicas@practicas.com</a></li>
                     </ul>
                 </div>
@@ -120,7 +120,7 @@
         <div class="container">
             <a href="/tiendaonlinepracticas" class="navbar-brand d-flex align-items-center">
                 <img src="icons/libro.png" height="50" width="50"/>
-                <h2><strong>&nbsp;Practicas</strong></h2>
+                <h2><strong>&nbsp;Vintage Bytes Emporium</strong></h2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
