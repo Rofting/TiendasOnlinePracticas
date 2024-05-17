@@ -51,8 +51,8 @@
                                     if (!role.equals("admin")) {
                                 %>
 <%--                        solo daremos la opcion de compra si no eres administrador y estas registrado, es decir un usuario normal--%>
-                                    <a href="#"  type="button" class="btn btn-sm btn-outline-danger">Comprar</a>
-<%--                                    <a href="place-an-order?id_product=<%= products.getId_product()%>"  type="button" class="btn btn-sm btn-outline-danger">Comprar</a> --%>
+<%--                                    <a href="#"  type="button" class="btn btn-sm btn-outline-danger">Comprar</a>--%>
+                                    <a href="place-an-order?id_product=<%= products.getId_product()%>"  type="button" class="btn btn-sm btn-outline-danger">Comprar</a>
                                 <%
                                     }
                                 %>
