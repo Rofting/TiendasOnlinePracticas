@@ -44,7 +44,7 @@
                 %>
                     <h3 class="text-white">---Modo Administrador---</h3>
                     <br/>
-<%--                    <a href="register-product.jsp" class="btn btn-sm btn-outline-primary" type="button">Alta Producto</a>--%>
+                        <a href="register-product.jsp" class="btn btn-sm btn-outline-primary" type="button">Alta Producto</a>
                         <a href="index-user.jsp" class="btn btn-sm btn-outline-danger" type="button">Usuarios</a>
 <%--                    <a href="index-suppliers.jsp" class="btn btn-sm btn-outline-primary" type="button">Proveedores</a>--%>
 <%--                    <a href="all-orders_done.jsp" class="btn btn-sm btn-outline-danger" type="button">Pedidos Realizados</a>--%>
@@ -100,7 +100,7 @@
                     <div class="col">
                         <div class="card shadow-sm">
 
-                            <img src="../retro_pictures/<%=products.getImage()%>" style="max-width: 480px;max-height: 360px;"/>
+                            <img src="../practicas_pictures/<%=products.getImage()%>" style="max-width: 480px;max-height: 360px;"/>
                             <div class="card-body">
                                 <p class="card-text"><strong><%= products.getProduct_name() %></strong>&nbsp;&nbsp;&nbsp;Lanzamiento:&nbsp;<strong><%=DateUtils.formatUser(products.getRelease_date())%></strong></p>
                                 <p class="card-text"><%= products.getDescription() %> </p>

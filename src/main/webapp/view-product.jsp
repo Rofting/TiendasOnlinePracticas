@@ -37,7 +37,7 @@
             <div class="col-sm-12  col-md-4 col-lg-4 col-xl-4 py-4 bg-image2">
                 <h3 class="text-danger">Foto del producto</h3>
                 <div class="card shadow-sm">
-                    <img src="../retro_pictures/<%=products.getImage()%>"  alt="<%= products.getDescription() %>"/>
+                    <img src="../practicas_pictures/<%=products.getImage()%>"  alt="<%= products.getDescription() %>"/>
                     <div class="btn-group">
                         <%if (products.getStock_units() == 0) { %>
                             <a href="mailto:retrobyte@retrobyte.com" type="button" class="btn btn-sm btn-outline-danger">Consultar Disponibilidad</a>
