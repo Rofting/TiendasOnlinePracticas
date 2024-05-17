@@ -49,14 +49,14 @@ public class EditSuppliers extends HttpServlet {
                         dao -> dao.addSupliers(name, tel, address, zip_code, city, country,
                         website,email));
                 response.getWriter().println("<div class='alert alert-success' role='alert'>" +
-                        "Proveedor registrado correctamente</div>");
+                        "Correctly registered Supplier</div>");
             } else {
                 final int finalid = id;
                 int affectedRows = Database.jdbi.withExtension(SuppliersDao.class,
                         dao -> dao.updateSuppliers(name, tel, address,
                                 zip_code, city, country,website,email, finalid));
                 response.getWriter().println("<div class='alert alert-success' role='alert'>" +
-                        "Modificacion de Proveedor realizada correctamente</div>");
+                        "Correctly modified Supplier</div>");
             }
 
 
@@ -67,46 +67,46 @@ public class EditSuppliers extends HttpServlet {
         } catch (SQLException sqle) {
             sqle.printStackTrace();
             response.getWriter().println("<div class='alert alert-danger' role='alert'>" +
-                    "Error conectando con la base de datos</div>");
+                    "Error connecting to the database</div>");
         }
     }
     private boolean hasValidationErrors(HttpServletRequest request, HttpServletResponse response) throws IOException {
         boolean hasErrors = false;
         if (request.getParameter("name").isBlank()) {
-            sendError("Nombre del proveedor es un campo obligatorio", response);
+            sendError("Supplier name is a required field", response);
             hasErrors = true;
         }
 
         if (request.getParameter("tel").isBlank()) {
-            sendError("Telefono es un campo obligatorio", response);
+            sendError("Phone is a required field", response);
             hasErrors = true;
         }
         if (request.getParameter("address").isBlank()) {
-            sendError("Direccion es un campo obligatorio", response);
+            sendError("Address is a required field", response);
             hasErrors = true;
         }
 
         if (request.getParameter("zip_code").isBlank()) {
-            sendError("Codigo Postal es un campo obligatorio", response);
+            sendError("Zip Code is a required field", response);
             hasErrors = true;
         }
         if (request.getParameter("city").isBlank()) {
-            sendError("Ciudad es un campo obligatorio", response);
+            sendError("City is a required field", response);
             hasErrors = true;
         }
 
         if (request.getParameter("zip_code").isBlank()) {
-            sendError("Pais es un campo obligatorio", response);
+            sendError("Zip Code is a required field", response);
             hasErrors = true;
         }
 
         if (request.getParameter("website").isBlank()) {
-            sendError("Website es un campo obligatorio", response);
+            sendError("Website is a required field", response);
             hasErrors = true;
         }
 
         if (request.getParameter("email").isBlank()) {
-            sendError("Email es un campo obligatorio", response);
+            sendError("Email is a required field", response);
             hasErrors = true;
         }
 
