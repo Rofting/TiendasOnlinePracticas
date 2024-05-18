@@ -1,10 +1,15 @@
 Requisitos
+
 Realizado los 5 puntos Obligatorios:
 
 1.Base de datos(modelo E-R, modelo Relacional y Scrip SQL)
+
 2.Todos lo stextos en Ingles
+
 3.Git Implementado con Git Flow
+
 4.Funcionalidad Listado detalle de 3 tablas completo(Users,Suppliers,Products), y visualizacion de pedidos realizados con sumatorio
+
 5.Funcionalidad de Registro y borrado en 3 tablas completo(User,Suppliers,Products)
 
 Otras funcionalidades:
