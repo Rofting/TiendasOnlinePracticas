@@ -33,7 +33,7 @@ public class RemoveProducts extends HttpServlet {
         } catch (Exception e) {
         e.printStackTrace();
         response.setStatus(400);
-        sendError("Error al borrar usuario", response);
+        sendError("Error when deleting products", response);
     }
     }
 }

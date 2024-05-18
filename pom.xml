@@ -88,7 +88,7 @@
                     <artifactId>tomcat7-maven-plugin</artifactId>
                     <version>2.2</version>
                     <configuration>
-                        <url>http://localhost:8080/manager/text</url>
+                        <url>http://localhost:8082/manager/text</url>
                         <server>tomcat9</server>
                         <!--                        atencion aqui el path tiene que coincidir con lo puesto en context.xml-->
                         <path>/tiendaonlinepracticas</path>
