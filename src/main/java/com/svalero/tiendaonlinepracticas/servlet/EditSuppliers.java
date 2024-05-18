@@ -49,7 +49,7 @@ public class EditSuppliers extends HttpServlet {
                         dao -> dao.addSupliers(name, tel, address, zip_code, city, country,
                         website,email));
                 response.getWriter().println("<div class='alert alert-success' role='alert'>" +
-                        "Supplier registered succesfully</div>");
+                        "Proveedor registrado correctamente</div>");
             } else {
                 final int finalid = id;
                 int affectedRows = Database.jdbi.withExtension(SuppliersDao.class,
