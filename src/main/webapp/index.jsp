@@ -131,7 +131,7 @@
                                             if (role.equals("admin")){
                                         %>
                                         <a href="register-product.jsp?id_product=<%=products.getId_product()%>"  type="button" class="btn btn-sm btn-outline-primary">Edit</a>
-                                        <<button onclick="deleteProduct()<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                                        <button onclick="deleteProduct(<%=products.getId_product()%>)" type="button" class="btn btn-sm btn-outline-danger">Delete</button>
                                         <%
                                             }
                                         %>
