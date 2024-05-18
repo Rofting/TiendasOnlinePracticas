@@ -24,7 +24,7 @@ public class RemoveUser extends HttpServlet {
             Database.connect();
             int affectedRows = Database.jdbi.withExtension(UserDao.class,
                     dao -> dao.removeUser(id_user));
-            sendMessage("Usuario borrado correctamente", response);
+            sendMessage("User deleted successfully", response);
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
         } catch (SQLException sqle) {
@@ -32,7 +32,7 @@ public class RemoveUser extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
             response.setStatus(400);
-            sendError("Error al borrar usuario", response);
+            sendError("Error when deleting user", response);
         }
     }
 

@@ -27,7 +27,7 @@ public class RemoveSuppliers extends HttpServlet {
                     dao -> dao.removeProductsSuppliers(id_supplier));
             int affectedRows1 = Database.jdbi.withExtension(SuppliersDao.class,
                     dao -> dao.removeSuppliers(id_supplier));
-            sendMessage("Proveedor borrado correctamente", response);
+            sendMessage("Supplier deleted successfully", response);
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
         } catch (SQLException sqle) {
@@ -35,7 +35,7 @@ public class RemoveSuppliers extends HttpServlet {
         } catch (Exception e) {
         e.printStackTrace();
         response.setStatus(400);
-        sendError("Error al borrar usuario", response);
+        sendError("Error when deleting supplier", response);
         }
     }
 }
