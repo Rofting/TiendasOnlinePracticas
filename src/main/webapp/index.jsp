@@ -32,7 +32,12 @@
     }
 </script>
 
-
+<head>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
 <main>
 
    <div class="py-5 container">
@@ -44,8 +49,8 @@
            <%
            } else {
            %>
-           <h4 class="text-danger"><%= username_init%></h4>
-           <p><a href="register-user.jsp?id_user=<%=user_id%>" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">&nbsp;&nbsp;Modify My Username&nbsp;&nbsp;</a></p>
+           <h4 class="text_inicio"><%= username_init%></h4>
+           <p><a href="register-user.jsp?id_user=<%=user_id%>" class="text_inicio">&nbsp;&nbsp;Modify My Username&nbsp;&nbsp;</a></p>
            <a href="logout" title="Cerrar sesión"><img src="icons/exit.png" height="50" width="50"/></a>
            <%
                }
@@ -61,16 +66,16 @@
                 <%
                     if (role.equals("admin")){
                 %>
-                    <h3 class="text-white">---Administrator Mode---</h3>
+                    <h3 class="text-dark">---Administrator Mode---</h3>
                     <br/>
-                        <a href="register-product.jsp" class="btn btn-sm btn-outline-primary" type="button">New product</a>
-                        <a href="index-user.jsp" class="btn btn-sm btn-outline-danger" type="button">Admin Users</a>
-                        <a href="index-suppliers.jsp" class="btn btn-sm btn-outline-primary" type="button">Admin Suppliers</a>
-                        <a href="all-orders_done.jsp" class="btn btn-sm btn-outline-danger" type="button">Orders Done</a>
+                        <a href="register-product.jsp" class="btn btn-success rounded-pill px-3" type="button">New product</a>
+                        <a href="index-user.jsp" class="btn btn-info rounded-pill px-3" type="button">Admin Users</a>
+                        <a href="index-suppliers.jsp" class="btn btn btn-dark rounded-pill px-3" type="button">Admin Suppliers</a>
+                        <a href="all-orders_done.jsp" class="btn btn-primary rounded-pill px3" type="button">Orders Done</a>
                 <%
                 } else {
                 %>
-                     <h3 class="text-white">---Star Products---</h3>
+                     <h3 class="text-dark">---Star Products---</h3>
                 <br/>
                 <%
                     if (role.equals("user")){
@@ -91,10 +96,12 @@
                 <form class="row g-2" id="search-form" method="GET">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Search in products " name="search" id="search-input">
-                        <button type="submit" class="btn btn-outline-danger"  id="search-button">Search</button>
+                        <button id="search-button" type="button" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
                 </form>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
                     <%
                         String search = "";
                         if (request.getParameter("search") != null)
