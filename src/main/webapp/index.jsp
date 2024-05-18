@@ -11,6 +11,25 @@
     $(document).ready(function () {
         $("#search-input").focus();
     });
+
+    function deleteProduct(productId) {
+        // Deshabilitar solo el botón clicado
+        $("#deleteproduct").prop("disabled", true);
+
+        $.ajax({
+            type: "GET",
+            url: "remove-products?id_product=" + productId,
+            success: function (data) {
+                $("#result").html("data");
+                $("#deleteproduct").prop("disabled", false);
+                window.location.href = "index.jsp";
+            },
+            error: function (error) {
+                $("#result").html("Error: " + error.responseText);
+                $("#deleteproduct").prop("disabled", false);
+            }
+        });
+    }
 </script>
 
 
@@ -112,11 +131,13 @@
                                             if (role.equals("admin")){
                                         %>
                                         <a href="register-product.jsp?id_product=<%=products.getId_product()%>"  type="button" class="btn btn-sm btn-outline-primary">Edit</a>
-                                        <a href="remove-products?id_product=<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-danger">Delete</a>
+                                        <<button onclick="deleteProduct()<%= products.getId_product()%>" type="button" class="btn btn-sm btn-outline-danger">Delete</button>
                                         <%
                                             }
                                         %>
                                     </div>
+
+                                    <div id="result"></div>
                                     <small class="text-body-secondary">Price: <%= CurrencyUtils.format(products.getSale_price()) %> </small>
                                 </div>
                             </div>

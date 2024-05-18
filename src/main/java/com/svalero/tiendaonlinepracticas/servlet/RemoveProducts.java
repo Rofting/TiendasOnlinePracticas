@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import static com.svalero.tiendaonlinepracticas.util.ErrorUtils.sendError;
+
 
 @WebServlet("/remove-products")
 public class RemoveProducts extends HttpServlet {
@@ -28,6 +30,10 @@ public class RemoveProducts extends HttpServlet {
             cnfe.printStackTrace();
         } catch (SQLException sqle) {
             sqle.printStackTrace();
-        }
+        } catch (Exception e) {
+        e.printStackTrace();
+        response.setStatus(400);
+        sendError("Error al borrar usuario", response);
+    }
     }
 }
