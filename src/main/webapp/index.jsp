@@ -131,13 +131,12 @@
                                             if (role.equals("admin")){
                                         %>
                                         <a href="register-product.jsp?id_product=<%=products.getId_product()%>"  type="button" class="btn btn-sm btn-outline-primary">Edit</a>
-                                        <button onclick="deleteProduct(<%=products.getId_product()%>)" type="button" class="btn btn-sm btn-outline-danger">Delete</button>
+                                        <button id="deleteproduct" onclick="deleteProduct(<%=products.getId_product()%>)" type="button" class="btn btn-sm btn-outline-danger">Delete</button>
                                         <%
                                             }
                                         %>
                                     </div>
 
-                                    <div id="result"></div>
                                     <small class="text-body-secondary">Price: <%= CurrencyUtils.format(products.getSale_price()) %> </small>
                                 </div>
                             </div>
@@ -147,7 +146,7 @@
                         }
                     %>
                 </div>
-
+                <div id="result"></div>
             </div>
         </div>
 
