@@ -10,6 +10,26 @@
     $(document).ready(function () {
         $("#search-input").focus();
     });
+    function deleteUser(userId) {
+        // Deshabilitar solo el botón clicado
+        $("#deleteuser").prop("disabled", true);
+
+        $.ajax({
+            type: "GET",
+            url: "remove-user?id_user=" + userId,
+            success: function (data) {
+                $("#result").html("data");
+                $("#deleteuser").prop("disabled", false);
+                window.location.href = "index-user.jsp";
+            },
+            error: function (error) {
+                $("#result").html("Error: " + error.responseText);
+                $("#deleteuser").prop("disabled", false);
+            }
+        });
+    }
+
+
 </script>
 
 <main>
@@ -72,7 +92,7 @@
                         <td><%=user.getRole()%></td>
                         <td><%=user.getCity()%></td>
                         <th><a href="view-user.jsp?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-success">View User</a></th>
-                        <th> <a href="remove-user?id_user=<%= user.getId_user()%>" type="button" class="btn btn-sm btn-outline-danger">Delete User</a></th>
+                        <th><button onclick="deleteUser(<%= user.getId_user()%>)" id=deleteuser" type="button" class="btn btn-sm btn-outline-danger">Delete User</button></th>
 
                     </tr>
                     <%
@@ -80,7 +100,9 @@
                     %>
                     </tbody>
                 </table>
+
         <br/>
+        <div id="result"></div>
         <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to initial menu</a></p>
     </div>
 

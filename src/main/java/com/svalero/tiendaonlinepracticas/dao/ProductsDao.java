@@ -1,6 +1,5 @@
 package com.svalero.tiendaonlinepracticas.dao;
 
-
 import com.svalero.tiendaonlinepracticas.domain.Products;
 import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;

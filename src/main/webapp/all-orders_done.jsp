@@ -9,6 +9,7 @@
 <%@ page import="com.svalero.tiendaonlinepracticas.dao.Orders_doneDao" %>
 <%@ page import="com.svalero.tiendaonlinepracticas.util.CurrencyUtils" %>
 <%@ page import="com.svalero.tiendaonlinepracticas.util.DateUtils" %>
+<%@ page import="com.svalero.tiendaonlinepracticas.domain.Order_product_user" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="includes/header.jsp"%>
 <script>
@@ -38,12 +39,11 @@
                     <tr>
                         <th>Order Id</th>
                         <th>Order date</th>
-                        <th>Username</th>
                         <th>Product ID</th>
-                        <th>Product Name</th>
-                        <th>Suppliers Name</th>
+                        <th>Name Product</th>
+                        <th>User ID</th>
+                        <th>Username</th>
                         <th>Total Price</th>
-
                     </tr>
                     </thead>
                     <tbody>
@@ -64,27 +64,26 @@
                         } catch (SQLException e) {
                             throw new RuntimeException(e);
                         }
-                        List<Orders_done> orders_dones = null;
+                        List<Order_product_user> orders_dones = null;
                         if (search.isEmpty()) {
-                            orders_dones = Database.jdbi.withExtension(Orders_doneDao.class, dao -> dao.getAllOrders());
+                            orders_dones = Database.jdbi.withExtension(Orders_doneDao.class, dao -> dao.getAllOrdersUserProduct());
                         } else {
                             final String searchTerm = search;
                             orders_dones = Database.jdbi.withExtension(Orders_doneDao.class, dao -> dao.getOrders(searchTerm));
                         }
 
-                        for (Orders_done orders_done : orders_dones) {
+                        for (Order_product_user orders_done : orders_dones) {
                           total_sale=total_sale+orders_done.getTotal_price();
                     %>
 
                     <tr>
                         <td><%=orders_done.getId_order()%></td>
                         <td><%=DateUtils.formatOrder(orders_done.getOrder_date())%></td>
-                        <td><%=orders_done.getUsername()%></td>
                         <td><%=orders_done.getId_product()%></td>
                         <td><%=orders_done.getProduct_name()%></td>
-                        <td><%=orders_done.getSupplier_name()%></td>
+                        <td><%=orders_done.getId_user()%></td>
+                        <td><%=orders_done.getUsername()%></td>
                         <td><%= CurrencyUtils.format(orders_done.getTotal_price()) %></td>
-
                     </tr>
                     <%
                         }
@@ -96,9 +95,7 @@
                         <th></th>
                         <th></th>
                         <th></th>
-                        <th></th>
                         <th>Total Orders:&nbsp<%= CurrencyUtils.format(total_sale) %></th>
-
                     </tr>
                     </tbody>
                 </table>

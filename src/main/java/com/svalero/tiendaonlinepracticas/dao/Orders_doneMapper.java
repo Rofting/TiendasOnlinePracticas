@@ -16,10 +16,7 @@ public class Orders_doneMapper implements RowMapper<Orders_done> {
                 rs.getDate("order_date"),
                 rs.getFloat("total_price"),
                 rs.getInt("id_product"),
-                rs.getString("product_name"),
-                rs.getString("supplier_name"),
-                rs.getInt("id_user"),
-                rs.getString("username"));
+                rs.getInt("id_user"));
 
     }
 }

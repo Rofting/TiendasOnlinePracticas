@@ -4,6 +4,6 @@
     <context-param>
         <description>Ruta donde guardar las imagenes</description>
         <param-name>image-path</param-name>
-        <param-value>C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\practicas_pictures</param-value>
+        <param-value>.\practicas_pictures</param-value>
     </context-param>
 </web-app>

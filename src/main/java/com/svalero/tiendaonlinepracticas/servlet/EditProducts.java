@@ -77,19 +77,19 @@ public class EditProducts extends HttpServlet {
                 dao -> dao.addProducts(product_name, description, sale_price, finalFilename,
                        release_date,product_status,id_supplier));
                 response.getWriter().println("<div class='alert alert-success' role='alert'>" +
-                    "Producto Registrado correctamente</div>");
+                    "Product sucessfully registered</div>");
             } else {
                 final int finalId=id;
                 int affectedRows = Database.jdbi.withExtension(ProductsDao.class,
                 dao -> dao.updateProducts(product_name, description, sale_price, finalFilename,
                        release_date,product_status,id_supplier,finalId));
                 response.getWriter().println("<div class='alert alert-success' role='alert'>" +
-                        "Producto modificado correctamente</div>");
+                        "Product successfully modified</div>");
             }
         } catch (ParseException pe) {
             pe.printStackTrace();
             response.getWriter().println("<div class='alert alert-danger' role='alert'>" +
-                    "El formato de fecha o de precio es no válido</div>");
+                    "Invalid date format</div>");
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
             response.getWriter().println("<div class='alert alert-danger' role='alert'>" +
@@ -97,31 +97,31 @@ public class EditProducts extends HttpServlet {
         } catch (SQLException sqle) {
             sqle.printStackTrace();
             response.getWriter().println("<div class='alert alert-danger' role='alert'>" +
-                    "Error conectando con la base de datos</div>");
+                    "Error conecting to database</div>");
         }
     }
     private boolean hasValidationErrors(HttpServletRequest request, HttpServletResponse response) throws IOException {
         boolean hasErrors = false;
         if (request.getParameter("product_name").isBlank()) {
-            sendError("El nombre del producto es un campo obligatorio", response);
+            sendError("Name product is required", response);
             hasErrors = true;
         }
 
         if (!NumberUtils.isCreatable(request.getParameter("id_supplier"))) {
-            sendError("Formato del codigo de proveedor no valido, ha de ser numerico", response);
+            sendError("Supplier code format is not valid", response);
             hasErrors = true;
         }
 
         try {
             DateUtils.parse(request.getParameter("release_date"));
         } catch (ParseException pe) {
-            sendError("Formato de Fecha de lancamiento del producto no valida", response);
+            sendError("Release date is not valid", response);
             hasErrors = true;
         }
         try {
             float priceValue = CurrencyUtils.parse(request.getParameter("sale_price"));
         } catch (ParseException pe) {
-            sendError("Formato de precio no valido", response);
+            sendError("Price format is not valid", response);
             hasErrors = true;
         }
 

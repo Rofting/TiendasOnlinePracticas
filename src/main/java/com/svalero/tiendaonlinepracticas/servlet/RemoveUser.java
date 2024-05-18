@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import static com.svalero.tiendaonlinepracticas.util.ErrorUtils.sendError;
+import static com.svalero.tiendaonlinepracticas.util.ErrorUtils.sendMessage;
+
 @WebServlet("/remove-user")
 public class RemoveUser extends HttpServlet {
     @Override
@@ -21,11 +24,15 @@ public class RemoveUser extends HttpServlet {
             Database.connect();
             int affectedRows = Database.jdbi.withExtension(UserDao.class,
                     dao -> dao.removeUser(id_user));
-            response.sendRedirect("index-user.jsp");
+            sendMessage("Usuario borrado correctamente", response);
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
         } catch (SQLException sqle) {
             sqle.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.setStatus(400);
+            sendError("Error al borrar usuario", response);
         }
     }
 

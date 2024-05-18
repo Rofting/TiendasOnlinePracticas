@@ -6,21 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style>
-        .bg-image {
-            /*background-image: url("https://wallpaperaccess.com/full/5599491.jpg");*/
-            background-image: url("https://cdn.pixabay.com/photo/2016/01/19/01/42/library-1147815_1280.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-        .bg-image2 {
-            background-image: url("https://cdn.pixabay.com/photo/2016/01/19/01/42/library-1147815_1280.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-    </style>
+
 </head>
 <%
     HttpSession currentSession = request.getSession();

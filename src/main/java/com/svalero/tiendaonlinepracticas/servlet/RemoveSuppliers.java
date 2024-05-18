@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import static com.svalero.tiendaonlinepracticas.util.ErrorUtils.sendError;
+import static com.svalero.tiendaonlinepracticas.util.ErrorUtils.sendMessage;
+
 @WebServlet("/remove-suppliers")
 public class RemoveSuppliers extends HttpServlet {
     @Override
@@ -24,12 +27,15 @@ public class RemoveSuppliers extends HttpServlet {
                     dao -> dao.removeProductsSuppliers(id_supplier));
             int affectedRows1 = Database.jdbi.withExtension(SuppliersDao.class,
                     dao -> dao.removeSuppliers(id_supplier));
-            response.sendRedirect("index-suppliers.jsp");
+            sendMessage("Proveedor borrado correctamente", response);
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
         } catch (SQLException sqle) {
             sqle.printStackTrace();
+        } catch (Exception e) {
+        e.printStackTrace();
+        response.setStatus(400);
+        sendError("Error al borrar usuario", response);
         }
     }
-
 }

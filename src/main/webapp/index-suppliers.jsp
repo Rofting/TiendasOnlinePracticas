@@ -12,6 +12,25 @@
     $(document).ready(function () {
         $("#search-input").focus();
     });
+
+    function deleteSupplier(supplierId) {
+        // Deshabilitar solo el botón clicado
+        $("#deletesupplier").prop("disabled", true);
+
+        $.ajax({
+            type: "GET",
+            url: "remove-suppliers?id_supplier=" + supplierId,
+            success: function (data) {
+                $("#result").html("data");
+                $("#deletesupplier").prop("disabled", false);
+                window.location.href = "index-suppliers.jsp";
+            },
+            error: function (error) {
+                $("#result").html("Error: " + error.responseText);
+                $("#deletesupplier").prop("disabled", false);
+            }
+        });
+    }
 </script>
 
 <main>
@@ -35,7 +54,7 @@
     <div class="container my-6 bg-dark">
 
 
-                <table class="table table-dark table-striped">
+        <table class="table table-dark table-striped">
                     <thead>
                     <tr>
                         <th>Supplier Id</th>
@@ -81,7 +100,7 @@
                         <td><%=suppliers.getEmail()%></td>
                         <th><a href="view-suppliers.jsp?id_supplier=<%= suppliers.getId_supplier()%>" type="button" class="btn btn-sm btn-outline-success">Ver Proveedor</a></th>
                         <th><a href="register-suppliers.jsp?id_supplier=<%= suppliers.getId_supplier()%>" type="button" class="btn btn-sm btn-outline-primary">Editar Proveedor</a></th>
-                        <th> <a href="remove-suppliers?id_supplier=<%= suppliers.getId_supplier()%>" type="button" class="btn btn-sm btn-outline-danger">Eliminar Proveedor</a></th>
+                        <th> <button id="deletesupplier" onclick="deleteSupplier(<%= suppliers.getId_supplier()%>)" type="button" class="btn btn-sm btn-outline-danger">Eliminar Proveedor</button></th>
 
                     </tr>
                     <%
@@ -91,6 +110,7 @@
                 </table>
 
         <br/>
+        <div id="result"></div>
         <p><a href="index.jsp" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to initial menu</a></p>
     </div>
 

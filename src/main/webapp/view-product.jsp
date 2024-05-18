@@ -40,7 +40,7 @@
                     <img src="../practicas_pictures/<%=products.getImage()%>"  alt="<%= products.getDescription() %>"/>
                     <div class="btn-group">
                         <%if (products.getStock_units() == 0) { %>
-                            <a href="mailto:retrobyte@retrobyte.com" type="button" class="btn btn-sm btn-outline-danger">Check availability</a>
+                            <div class="btn btn-sm btn-outline-danger">Out of stock</div>
                         <%} else {%>
                             <%
                                 if (role.equals("anonymous")) {

@@ -33,7 +33,7 @@ public class PlaceAnOrder extends HttpServlet {
 //                    products.getDescription(),products.getSale_price(),products.getImage(),products.getRelease_date(), products.getProduct_status(), products.getId_supplier()));
 
             Database.jdbi.withExtension(Orders_doneDao.class, dao -> dao.addOrders_done(new Date(System.currentTimeMillis()),
-                    products.getSale_price(),id_product,products.getProduct_name(),suplliers.getName(),id_user,username));
+                    products.getSale_price(),id_product,id_user));
 
             int affectedRows = Database.jdbi.withExtension(ProductsDao.class,
                     dao -> dao.updateProductsStock(stock_unitsfinal,id_product));
