@@ -29,7 +29,7 @@ public interface Orders_doneDao {
     Orders_done getOrders_done(int id_order);
 
     @SqlQuery("SELECT id_order, order_date, total_price, p.id_product,  p.product_name, u.id_user, u.username from orders_done od join \n" +
-            "    products p on od.id_product = p.id_product join\n" +
+            "    products p on od.id_product = p.id_product join" +
             "    users u on u.id_user = od.id_user WHERE product_name LIKE '%'||:searchTerm||'%'" +
             "OR username LIKE '%'||:searchTerm||'%'" +
             "OR TO_CHAR(order_date, 'DD-MM-YYYY') LIKE '%'||:searchTerm||'%' order by order_date, total_price")

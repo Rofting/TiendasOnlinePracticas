@@ -64,14 +64,14 @@ public class EditUser extends HttpServlet {
                         dao -> dao.addUser(name, username, finalpassword, finalrole, tel, address,
                                 zip_code, city, country));
                 response.getWriter().println("<div class='alert alert-success' role='alert'>" +
-                        "Bienvenido¡¡¡ Ya eres un usuario registrado de las Practicas</div>");
+                        "Welcome¡¡¡, you are already a registered user</div>");
             } else {
                 final int finalid = id;
                 int affectedRows = Database.jdbi.withExtension(UserDao.class,
                         dao -> dao.updateUser(name, username, finalpassword, finalrole, tel, address,
                                 zip_code, city, country, finalid));
                 response.getWriter().println("<div class='alert alert-success' role='alert'>" +
-                        "Modificacion de usuario realizada correctamente</div>");
+                        "Correctly modified user</div>");
 
             }
 
@@ -82,46 +82,46 @@ public class EditUser extends HttpServlet {
         } catch (SQLException sqle) {
             sqle.printStackTrace();
             response.getWriter().println("<div class='alert alert-danger' role='alert'>" +
-                    "Error conectando con la base de datos</div>");
+                    "Error conecting to the data base</div>");
 
         }
     }
     private boolean hasValidationErrors(HttpServletRequest request, HttpServletResponse response,int id) throws IOException {
         boolean hasErrors = false;
         if (request.getParameter("name").isBlank()) {
-            sendError("Nombre del usuario es un campo obligatorio", response);
+            sendError("Name is a required field", response);
             hasErrors = true;
         }
 
         if (request.getParameter("username").isBlank()) {
-            sendError("Username es un campo obligatorio", response);
+            sendError("Username is a required field", response);
             hasErrors = true;
         }
 
         if (request.getParameter("password").isBlank()) {
-                sendError("Password es un campo obligatorio", response);
+                sendError("Password is a required field", response);
                 hasErrors = true;
         }
         if (request.getParameter("tel").isBlank()) {
-            sendError("Telefono es un campo obligatorio", response);
+            sendError("Phone is a required field", response);
             hasErrors = true;
         }
         if (request.getParameter("address").isBlank()) {
-            sendError("Direccion es un campo obligatorio", response);
+            sendError("Addreess is a required field", response);
             hasErrors = true;
         }
 
         if (request.getParameter("zip_code").isBlank()) {
-            sendError("Codigo Postal es un campo obligatorio", response);
+            sendError("Zip code is a required field", response);
             hasErrors = true;
         }
         if (request.getParameter("city").isBlank()) {
-            sendError("Ciudad es un campo obligatorio", response);
+            sendError("City is a required field", response);
             hasErrors = true;
         }
 
         if (request.getParameter("country").isBlank()) {
-            sendError("Pais es un campo obligatorio", response);
+            sendError("Country", response);
             hasErrors = true;
         }
 

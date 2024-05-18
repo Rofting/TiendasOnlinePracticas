@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 
             } else {
                 response.getWriter().println("<div class='alert alert-danger' role='alert'>" +
-                        "El usuario no existe</div>");
+                        "Username does not exist</div>");
             }
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
         } catch (SQLException sqle) {
             sqle.printStackTrace();
             response.getWriter().println("<div class='alert alert-danger' role='alert'>" +
-                    "Error conectando con la base de datos</div>");
+                    "Error conecting to the data base</div>");
         }
 
     }

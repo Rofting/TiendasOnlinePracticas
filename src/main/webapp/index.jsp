@@ -26,7 +26,7 @@
            } else {
            %>
            <h4 class="text-danger"><%= username_init%></h4>
-           <p><a href="register-user.jsp?id_user=<%=user_id%>" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">&nbsp;&nbsp;Modificar mi Usuario&nbsp;&nbsp;</a></p>
+           <p><a href="register-user.jsp?id_user=<%=user_id%>" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">&nbsp;&nbsp;Modify My Username&nbsp;&nbsp;</a></p>
            <a href="logout" title="Cerrar sesión"><img src="icons/exit.png" height="50" width="50"/></a>
            <%
                }
