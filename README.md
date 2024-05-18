@@ -26,6 +26,8 @@ Extra 5: Diseño. Utilizacion de Boostrap para realizar maquetacion.
 
 Extra 6: Diseño responsive
 
+Extra 7: Creación de Diagrama de Clases y Diagrama de Casos de Uso
+
 Otras funciones implementadas:
 
             * En Alta y Modificacion de producto se introduce en el formulario listado de proveedores desplegable con datos de la BD de la tabla de Proveedores
