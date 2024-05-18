@@ -66,7 +66,7 @@
                 <% if (id !=0) {%> value="<%=user.getUsername()%>"<% }%>>
             </div>
 
-                <div class="mb-3 text-white bg-dark">
+                <div class="mb-3 text-dark">
                     <label for="password" class="form-label">Password</label>
                      <input type="text" name ="password" class="form-control" id="password" placeholder="Example Labcdef1B">
                 </div>

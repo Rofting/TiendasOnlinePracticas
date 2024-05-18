@@ -81,7 +81,7 @@
         <% } %>
         <br/>
         <form class="row g-3 needs-validation bg-dark border-dark" method="post" enctype="multipart/form-data" id="edit-form">
-            <div class="mb-3  text-white bg-dark">
+            <div class="mb-3  text-dark">
                 <label for="product_name" class="form-label">Name</label>
                 <input type="text" name="product_name" class="form-control" id="product_name" placeholder="Name product"
                     <% if (id !=0) {%> value="<%=products.getProduct_name()%>"<% }%>>

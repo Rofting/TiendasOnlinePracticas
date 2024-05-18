@@ -58,7 +58,7 @@
         <br/>
 
         <form class="row g-3 needs-validation bg-dark border-dark" method="post" enctype="multipart/form-data" id="edit-form">
-            <div class="col-md-6 text-white bg-dark">
+            <div class="col-md-6 text-dark">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" name="name" class="form-control" id="name" placeholder=".."
                 <% if (id !=0) {%> value="<%=suppliers.getName()%>"<% }%>>
